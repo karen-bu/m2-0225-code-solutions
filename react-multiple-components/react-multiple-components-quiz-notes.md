@@ -14,7 +14,7 @@ Answer the following questions in the provided markdown file before turning in t
 5. Add inverse data flow
 
 - How does data flow in React?
-  Data in React can flow from parent to child using props, or from child to parent using state setters.
+  Data in React can flow from parent to child using props.
 
 - How can children components modify state in their parents?
   Children components can modify state in their parents by using functions on event handlers.

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ForwardPrevButton } from './ForwardPrevButton';
 import { CarouselButton } from './CarouselButton';
+import './RotatingBanner.css';
 
 type Props = {
   animals: string[];
@@ -8,6 +9,7 @@ type Props = {
 
 export function RotatingBanner({ animals }: Props) {
   const [index, setIndex] = useState(0);
+  const [carouselButtonClass, setButtonClass] = useState('carousel button');
 
   function handleClickPrev() {
     if (index >= 1) {
@@ -25,15 +27,24 @@ export function RotatingBanner({ animals }: Props) {
     }
   }
 
+  function handleCarouselClick(index: number) {
+    setIndex(index);
+    setButtonClass('carousel button active');
+  }
+
   return (
     <div>
-      <div>{animals[index]}</div>
+      <div>
+        <p>{animals[index]}</p>
+      </div>
       <div className="subdiv">
         <ForwardPrevButton handleClick={handleClickPrev} label="PREVIOUS" />
       </div>
       <CarouselButton
-        handleClick={(buttonIndex) => setIndex(buttonIndex)}
+        current={index}
+        handleClick={(index) => handleCarouselClick(index)}
         array={animals}
+        buttonClass={carouselButtonClass}
       />
       <div className="subdiv">
         <ForwardPrevButton handleClick={handleClickNext} label="NEXT" />

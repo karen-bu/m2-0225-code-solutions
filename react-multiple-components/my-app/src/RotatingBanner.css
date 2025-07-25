@@ -10,6 +10,8 @@ p {
 }
 
 button {
+  height: 50px;
+  width: 200px;
   margin: 5px;
   border-radius: 50px;
   border-color: #3d6930;
