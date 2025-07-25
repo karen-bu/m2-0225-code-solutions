@@ -1,0 +1,8 @@
+.hidden {
+  display: hidden;
+}
+
+.search-header {
+  display: flex;
+  justify-content: center;
+}
