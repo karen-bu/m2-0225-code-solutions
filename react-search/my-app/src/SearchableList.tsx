@@ -8,14 +8,10 @@ type SearchableListProps = {
 
 export function SearchableList({ quoteList }: SearchableListProps) {
   const [searchValue, setSearchValue] = useState('');
-  const [filteredQuotes, setFilteredQuotes] = useState(quoteList);
 
-  function filterQuotes({ quoteList }: SearchableListProps) {
-    const filter = quoteList.filter((searchValue) =>
-      quoteList.includes(searchValue.toLowerCase())
-    );
-    setFilteredQuotes(filter);
-  }
+  const displayedQuotes = quoteList.filter((quote) =>
+    quote.toLowerCase().includes(searchValue.toLowerCase())
+  );
 
   return (
     <div>
@@ -23,10 +19,7 @@ export function SearchableList({ quoteList }: SearchableListProps) {
         <SearchBar inputValue={searchValue} setInputValue={setSearchValue} />
       </div>
       <div>
-        <QuotesList
-          quoteList={filteredQuotes}
-          onChange={filterQuotes({ quoteList })}
-        />
+        <QuotesList quoteList={displayedQuotes} />
       </div>
     </div>
   );
