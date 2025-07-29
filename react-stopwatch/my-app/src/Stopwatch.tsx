@@ -6,13 +6,13 @@ type StopwatchProps = {
   pauseClick: () => void;
   stopwatchClick: () => void;
   time: number;
-  timerID: NodeJS.Timeout | undefined;
+  isPlaying: NodeJS.Timeout | undefined;
 };
 
 export function Stopwatch({
   stopwatchClick,
   time,
-  timerID,
+  isPlaying,
   playClick,
   pauseClick,
 }: StopwatchProps) {
@@ -21,7 +21,7 @@ export function Stopwatch({
       <div className="stopwatch" onClick={stopwatchClick}>
         <p>{time}</p>
       </div>
-      {!timerID ? (
+      {!isPlaying ? (
         <div className="button">
           <FaPlay className="play-button" onClick={playClick} />
         </div>
