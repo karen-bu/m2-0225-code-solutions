@@ -1,0 +1,17 @@
+.title {
+  min-width: 500px;
+  max-width: 500px;
+  border: 3px solid darkslategrey;
+  background-color: darkslategrey;
+  color: white;
+}
+
+.content {
+  min-width: 500px;
+  max-width: 500px;
+  border: 3px solid darkslategrey;
+}
+
+.hidden {
+  visibility: hidden;
+}
