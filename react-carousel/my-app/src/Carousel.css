@@ -1,0 +1,38 @@
+.content-container {
+  display: flex;
+  align-items: center;
+}
+
+.dots-container {
+  margin-top: 40px;
+}
+
+.column-33 {
+  width: 33%;
+}
+
+h1 {
+  font-family: Impact, sans-serif;
+}
+
+img {
+  max-height: 500px;
+  max-width: 500px;
+}
+
+.carousel-button {
+  font-size: 100px;
+}
+
+.carousel-button:hover {
+  font-size: 120px;
+  transition: ease-in-out 0s;
+}
+
+.carousel-button:active {
+  font-size: 100px;
+}
+
+.carousel-dot {
+  font-size: 30px;
+}
