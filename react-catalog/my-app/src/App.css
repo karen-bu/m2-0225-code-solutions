@@ -1,0 +1,36 @@
+/* Header */
+
+p,
+h2 {
+  font-family: Helvetica, sans-serif;
+}
+
+.header-container {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  background-color: darkslategray;
+  font-weight: bold;
+}
+
+.header-link-container {
+  margin-left: 20px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: goldenrod;
+  transition: ease-in-out 0.25s;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+}
+
+.about-container {
+  text-align: center;
+}
