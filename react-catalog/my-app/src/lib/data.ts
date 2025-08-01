@@ -1,4 +1,4 @@
-import { Product } from './read';
+import { type Product } from './read';
 
 export const products: Product[] = [
   {
