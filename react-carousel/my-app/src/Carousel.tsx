@@ -4,7 +4,7 @@ import { PrevButton } from './PrevButton';
 import { CarouselDots } from './CarouselDots';
 import { CarouselImage } from './CarouselImage';
 import './Carousel.css';
-import { useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 type Image = {
   src: string;
@@ -24,27 +24,26 @@ export function Carousel({ carouselImages }: CarouselProps) {
     } else if (currentIndex === 0) {
       setCurrentIndex(carouselImages.length - 1);
     }
-    console.log(currentIndex);
   }
 
-  function handleClickForward() {
+  const handleClickForward = useCallback(() => {
     if (currentIndex < carouselImages.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else if (currentIndex === carouselImages.length - 1) {
       setCurrentIndex(0);
     }
-  }
-
-  function autoScroll() {
-    setTimeout(() => handleClickForward(), 3000);
-    console.log(currentIndex);
-  }
+  }, [currentIndex, carouselImages.length]);
 
   function handleClickDots(currentIndex: number) {
     setCurrentIndex(currentIndex);
   }
 
-  autoScroll();
+  useEffect(() => {
+    const autoScroll = setTimeout(() => {
+      handleClickForward();
+    }, 3000);
+    return () => clearTimeout(autoScroll);
+  }, [handleClickForward]);
 
   return (
     <div>

@@ -1,5 +1,4 @@
-// import { GoDotFill } from 'react-icons/go';
-import { GoDot } from 'react-icons/go';
+import { GoDotFill, GoDot } from 'react-icons/go';
 import Image from './App';
 
 type Image = {
@@ -13,14 +12,26 @@ type CarouselDotsProps = {
   dotClick(index: number): void;
 };
 
-export function CarouselDots({ carouselContent, dotClick }: CarouselDotsProps) {
-  const carouselDotList = carouselContent.map((_, dotIndex) => (
-    <GoDot
-      className="carousel-dot"
-      key={dotIndex}
-      onClick={() => dotClick(dotIndex)}
-    />
-  ));
+export function CarouselDots({
+  carouselContent,
+  current,
+  dotClick,
+}: CarouselDotsProps) {
+  const carouselDotList = carouselContent.map((_, dotIndex) =>
+    current === dotIndex ? (
+      <GoDotFill
+        className="carousel-dot"
+        key={dotIndex}
+        onClick={() => dotClick(dotIndex)}
+      />
+    ) : (
+      <GoDot
+        className="carousel-dot"
+        key={dotIndex}
+        onClick={() => dotClick(dotIndex)}
+      />
+    )
+  );
 
   return <div>{carouselDotList}</div>;
 }
