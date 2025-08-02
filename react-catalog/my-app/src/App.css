@@ -37,10 +37,15 @@
 .about-container h2,
 .not-found-container h2 {
   font-family: Helvetica, sans-serif;
+  color: #012121;
+  text-decoration: wavy underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 12px;
 }
 
 .about-container img,
 .not-found-container img {
+  margin-top: 20px;
   width: 500px;
   height: 500px;
 }
@@ -126,4 +131,106 @@
 .product-card p {
   color: #98b8b8;
   font-size: 10px;
+}
+
+/* Product Details */
+
+.product-loading-error {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  color: #012121;
+  text-decoration: wavy underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 12px;
+}
+
+.product-details-back-link a {
+  text-decoration: none;
+  color: #739393;
+}
+
+.product-details-back-link {
+  width: 100%;
+  text-decoration: wavy underline #739393;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 5px;
+  margin-bottom: 20px;
+}
+
+.product-details-back-link a:hover {
+  color: #98b8b8;
+  text-decoration: wavy underline #98b8b8;
+}
+
+.product-details-back-link a:active {
+  color: #739393;
+  text-decoration: wavy underline #739393;
+}
+
+.product-details-container {
+  padding: 80px;
+  margin: 20px;
+  border: dotted #012121 3px;
+  border-radius: 30px;
+  font-family: Helvetica, sans-serif;
+}
+
+.product-details {
+  display: flex;
+}
+
+.product-details-column {
+  margin: 20px;
+}
+
+.product-details-column img {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+}
+
+.product-details-column h1 {
+  font-size: 40px;
+  color: #012121;
+  text-decoration: wavy underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 12px;
+}
+
+.product-details-column h2 {
+  color: #739393;
+  font-size: 18px;
+}
+
+.product-details-column h3 {
+  color: #274747;
+}
+
+.product-details-column p {
+  font-size: 12px;
+}
+
+.product-details-column button {
+  margin-top: 10px;
+  height: 50px;
+  width: 150px;
+  background-color: #98b8b8;
+  color: #012121;
+  border: solid #012121 2px;
+  border-radius: 40px;
+}
+
+.product-details-column button:hover {
+  text-decoration: wavy underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 1px;
+  width: 155px;
+  opacity: 80%;
+  transition: ease-in-out 0.1s;
+}
+
+.product-details-column button:active {
+  background-color: #98b8b8;
+  opacity: 100%;
+  width: 150px;
 }

@@ -1,6 +1,5 @@
 import './App.css';
 import { Routes, Route } from 'react-router';
-import { products } from './lib/data';
 
 import { Header } from './1_Components/Header';
 import { Catalog } from './2_Pages/Catalog';
@@ -13,8 +12,11 @@ export function App() {
     <>
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route index element={<Catalog inventory={products} />} />
-          <Route path="/product/:productId" element={<ProductDetailPage />} />
+          <Route index element={<Catalog />} />
+          <Route
+            path="/product-details/:productId"
+            element={<ProductDetailPage />}
+          />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Route>
