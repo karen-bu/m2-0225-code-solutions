@@ -1,0 +1,38 @@
+.container {
+  padding: 20px;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: salmon;
+  border: none;
+}
+
+button:hover {
+  background-color: lightsalmon;
+  transition: ease-in-out 0.2s;
+}
+
+button:active {
+  background-color: salmon;
+  transition: ease-in-out 0.2s;
+}
+
+.popup {
+  background: white;
+  list-style-type: none;
+  padding: 0;
+  border: 2px dotted salmon;
+  padding-top: 10px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+}
