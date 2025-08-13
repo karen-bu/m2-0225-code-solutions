@@ -46,6 +46,9 @@ describe('multiplyBy', () => {
       four: false,
       five: null,
       six: undefined,
+      seven: [],
+      eight: {},
+      nine: '2',
     };
     const multiplier = 2;
     const result = multiplyBy(numObj, multiplier);
@@ -56,6 +59,9 @@ describe('multiplyBy', () => {
       four: false,
       five: null,
       six: undefined,
+      seven: [],
+      eight: {},
+      nine: '2',
     });
   });
 });

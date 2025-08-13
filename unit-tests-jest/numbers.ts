@@ -35,15 +35,7 @@ export function multiplyBy(
 ): Record<string, unknown> {
   const result: Record<string, unknown> = {};
   Object.entries(obj).forEach(([key, value]) => {
-    if (isNaN(Number(value))) {
-      result[key] = value;
-    } else if (value === true) {
-      result[key] = value;
-    } else if (value === false) {
-      result[key] = value;
-    } else if (value === null) {
-      result[key] = value;
-    } else if (value === undefined) {
+    if (typeof value !== 'number') {
       result[key] = value;
     } else {
       result[key] = Number(value) * multiplier;
