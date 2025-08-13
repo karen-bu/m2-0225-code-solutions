@@ -10,9 +10,9 @@ describe('evenNumbers', () => {
 
 describe('toDollars', () => {
   it('returns a number formatted as dollars and cents (i.e. has two decimal points at most)', () => {
-    const amountInCents = 1343;
-    const result = toDollars(amountInCents);
-    expect(result).toEqual('$13.43');
+    const unformatted = 132.438482;
+    const result = toDollars(unformatted);
+    expect(result).toEqual('$132.44');
   });
 });
 
