@@ -30,8 +30,7 @@ app.get('/api/products', async (req, res, next) => {
     `;
 
     const result = await db.query<Product[]>(sqlGetProducts);
-
-    const products = res.json(result.rows);
+    const products = result.rows;
     res.status(200).json(products);
   } catch (err) {
     next(err);
@@ -51,7 +50,7 @@ app.get('/api/products/:productId', async (req, res, next) => {
 
     const params = [productId];
     const result = await db.query<Product[]>(sqlGetProduct, params);
-    const product = res.json(result.rows[0]);
+    const product = result.rows[0];
 
     res.status(200).json(product);
   } catch (err) {
